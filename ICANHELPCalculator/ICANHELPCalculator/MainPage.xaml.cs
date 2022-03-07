@@ -50,6 +50,7 @@ namespace ICANHELPCalculator
                     secondNumber = number;//it will be implemented as the number of current state changes i.e. 2
                 }
             }
+
         }
 
         void OnSelectOperator(object sender, EventArgs e)//event is called when the select operator is called 
@@ -108,6 +109,10 @@ namespace ICANHELPCalculator
             }
         }
 
+        private void onSelectVariable(object sender, EventArgs e)
+        {
+
+        }
 
         private void squareclicked(object sender, EventArgs e)//We call this method when we have one resulting number or initial number ,we are going to find out the square root of that number
         {
