@@ -6,10 +6,10 @@ using Android.Runtime;
 using Android.OS;
 
 namespace ICANHELPCalculator.Droid
-{
-    [Activity(Label = "ICANHELPCalculator", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+{                                                                                       //code added so the phone is available on landscape
+    [Activity(Label = "ICANHELPCalculator", Icon = "@mipmap/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.FullSensor, Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-    {
+    {    // Next: adjust the buttons on the phone and configurate the screen to add more buttons and operators
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
