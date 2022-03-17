@@ -13,6 +13,7 @@ namespace ICANHELPCalculator
         int currentState = 1;
         string myoperator;
         double firstNumber, secondNumber;
+        string myVariable;
         public MainPage()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace ICANHELPCalculator
             //validation before button is pressed
 
             //if the current result is 0 in text box then we will direct the calculator to exclude 0 when pressing busttons
-            if (this.resultText.Text == "0" || currentState < 0)//at first current state is 1
+            if (this.resultText.Text == "X" || currentState < 0)//at first current state is 1
             {
                 this.resultText.Text = "";//here the text value will be cleared when pressing button
 
@@ -49,6 +50,8 @@ namespace ICANHELPCalculator
                 {
                     secondNumber = number;//it will be implemented as the number of current state changes i.e. 2
                 }
+
+
             }
         }
 
@@ -114,8 +117,20 @@ namespace ICANHELPCalculator
 
             if ((currentState == -1) || (currentState == 1))
             {
+                var result = Math.Exp(secondNumber);
+                //var result = firstNumber * firstNumber;
+                this.resultText.Text = result.ToString();
+                firstNumber = result;
+                currentState = -1;
+            }
+        }
+        private void Exponentclicked(object sender, EventArgs e)//We call this method when we have one resulting number or initial number ,we are going to find out the square root of that number
+        {
+
+            if ((currentState == -1) || (currentState == 1))
+            {
                 //var result = OperatorHelper.MySquare(firstNumber, myoperator);
-                var result = firstNumber * firstNumber;
+                var result = Math.Pow(firstNumber,firstNumber);
                 this.resultText.Text = result.ToString();
                 firstNumber = result;
                 currentState = -1;
