@@ -45,6 +45,10 @@
               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
 
 
+        <Button Text="AC" Grid.Row="1" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="#808080" Clicked="OnClear" />
+        <Button Text="√" Grid.Row="1" Grid.Column="1" Style="{StaticResource infostyle}" BackgroundColor="#808080"  FontSize="36" Clicked="OnSquareRoot"/>
+        <Button BorderRadius="30" Text="%" Grid.Row="1" Grid.Column="2" Style="{StaticResource infostyle}"  BackgroundColor="#808080" Clicked="OnPercentage"/>
+
         <Button Text="AC" Grid.Row="1" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="#808080"  FontSize="15" Clicked="OnClear" />
         <Button Text="√" Grid.Row="1" Grid.Column="4" Style="{StaticResource infostyle}" BackgroundColor="#EE7600"  FontSize="15" Clicked="OnSquareRoot"/>
         <Button Text="%" Grid.Row="4" Grid.Column="3" Style="{StaticResource infostyle}"  BackgroundColor="#808080"  FontSize="15" Clicked="OnPercentage"/>
@@ -58,7 +62,6 @@
         <Button Text="ENTER" Grid.Row="7" Grid.Column="2" Style="{StaticResource infostyle}"  BackgroundColor="#808080"  FontSize="15" Clicked="OnSelectVariable"/>
         <Button Text="." Grid.Row="7" Grid.Column="3" Style="{StaticResource infostyle}"  BackgroundColor="#808080"  FontSize="15" Clicked="OnSelectVariable"/>
         <Button Text="," Grid.Row="7" Grid.Column="4" Style="{StaticResource infostyle}"  BackgroundColor="#808080"  FontSize="15" Clicked="OnSelectVariable"/>
-
 
 
 
@@ -82,9 +85,20 @@
 
         <Button Text="=" Grid.Row="5" Grid.Column="3"  BackgroundColor="#EE7600"  Clicked="OnCalculate"  Style="{StaticResource infostyle}"/>
 
+        <Button Text="÷" Grid.Row="1" Grid.Column="3" BackgroundColor="#EE7600"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}"/>
+        <Button Text="*" Grid.Row="2" Grid.Column="3" BackgroundColor="#EE7600"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        <Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="#EE7600" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        <Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="#EE7600"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+
+        <Button Text="÷" Grid.Row="2" Grid.Column="4" BackgroundColor="#EE7600"  FontSize="20" Clicked="OnSelectOperator" Style="{StaticResource infostyle}"/>
+        <Button Text="*" Grid.Row="3" Grid.Column="4" BackgroundColor="#EE7600"  FontSize="20"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        <Button Text="-" Grid.Row="4" Grid.Column="4" BackgroundColor="#EE7600"  FontSize="20" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        <Button Text="+" Grid.Row="5" Grid.Column="4" BackgroundColor="#EE7600"  FontSize="20"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+
         <Button Text="X" Grid.Row="1" Grid.Column="1" BackgroundColor="DarkSeaGreen"  FontSize="20"  Clicked="OnSelectVariable" Style="{StaticResource infostyle}" />
         <Button Text="Y" Grid.Row="1" Grid.Column="2" BackgroundColor="Purple"  FontSize="20"  Clicked="OnSelectVariable" Style="{StaticResource infostyle}" />
         <Button Text="Z" Grid.Row="1" Grid.Column="3" BackgroundColor="Blue"  FontSize="20"  Clicked="OnSelectVariable" Style="{StaticResource infostyle}" />
+
     </Grid>
 </ContentPage>
 

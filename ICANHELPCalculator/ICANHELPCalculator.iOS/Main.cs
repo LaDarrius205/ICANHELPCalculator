@@ -7,6 +7,8 @@ using UIKit;
 
 namespace ICANHELPCalculator.iOS
 {
+    [ObsoleteAttribute]
+
     public class Application
     {
         // This is the main entry point of the application.
