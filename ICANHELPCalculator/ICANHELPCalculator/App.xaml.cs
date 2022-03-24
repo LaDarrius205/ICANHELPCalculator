@@ -10,7 +10,7 @@ namespace ICANHELPCalculator
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new View();
         }
 
         protected override void OnStart()
