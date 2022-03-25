@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ICANHELPCalculator.ProfileRegister">
+    <!--REGISTER1 PAGE-->
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                <GradientStop Color="Purple" Offset="0.0"/>
+                <GradientStop Color="LightGoldenrodYellow" Offset="0.1"/>
+                <GradientStop Color="LimeGreen" Offset="0.7"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout>
+
+
+            <Label
+            Text="2Nite Account Register"
+            HorizontalTextAlignment="Center"
+            TextColor="White" 
+            FontSize="36"
+            Padding="0,20,0,20"/>
+
+            <!--Email-->
+            <Entry                    
+            x:Name="GetEmail"
+            Placeholder="Email"
+            Keyboard="Email"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Margin="20,10"/>
+
+            <!--Username-->
+            <Entry                   
+            x:Name="GetUsername"
+            Placeholder="Username"
+            Keyboard="Text"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Margin="10,10"/>
+
+            <!--Password-->
+            <Entry                   
+            x:Name="GetPassword"
+            Placeholder="Password"
+            Keyboard="Text"
+            MaxLength="12"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Margin="10,10"/>
+
+            <!--VerifyPassword-->
+            <Entry                    
+            x:Name="GetVerifyPassword"
+            Placeholder="Confirm Password"
+            Keyboard="Text"
+            MaxLength="12"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Margin="10,10"/>
+
+            <!--Password Mismatch warning INVISIBLE-->
+            <Label 
+            x:Name="PwMismatchWarn" 
+            Text="" 
+            IsVisible="False" 
+            TextColor="Purple" 
+            FontSize="15" 
+            BackgroundColor="Transparent" 
+            FlexLayout.AlignSelf="End"/>
+
+            <!--PhoneNumber-->
+            <Entry                   
+            x:Name="GetNumber"
+            Placeholder="Phone Number"
+            Keyboard="Telephone"
+            MaxLength="10"
+            BackgroundColor="Gainsboro"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Margin="10,10"/>
+
+            <!--Invalid phone number warning INVISIBLE-->
+            <Label 
+            x:Name="NumberNotValid" 
+            Text="" IsVisible="False" 
+            TextColor="Purple" 
+            FontSize="15" 
+            BackgroundColor="Transparent" 
+            FlexLayout.AlignSelf="End"/>
+
+            <!--Register Button-->
+            <Button
+            x:Name="rSubmit"
+            HorizontalOptions="Center"
+            CornerRadius="10"
+            Text="REGISTER"
+            Margin="15,10"
+            Padding="30,0,30,0"
+            Clicked="RegSubmitClicked"/>
+
+            <Label FontSize="16" Padding="30,5,30,0" VerticalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://2Nite-Usage" FontAttributes="Bold" TextColor="Purple"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
