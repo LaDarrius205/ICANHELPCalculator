@@ -10,7 +10,6 @@ namespace ICANHELPCalculator
         {
             InitializeComponent();
 
-            MainPage = new View();
             MainPage = new NavigationPage(new SplashScreen());
 
         }

@@ -34,7 +34,7 @@ namespace ICANHELPCalculator
             await image.ScaleTo(1, 1000);
             await image.ScaleTo(0.5, 1000, Easing.CubicOut);
             await image.ScaleTo(50, 800, Easing.CubicIn);
-            Application.Current.MainPage = new NavigationPage(new MainPage());
+            Application.Current.MainPage = new NavigationPage(new View());
         }
     }
 }
