@@ -4,9 +4,11 @@
              xmlns:local="clr-namespace:ICANHELPCalculator"
              x:Class="ICANHELPCalculator.MainPage">
 
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Settings"
                       Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
+
 </ContentPage>
 

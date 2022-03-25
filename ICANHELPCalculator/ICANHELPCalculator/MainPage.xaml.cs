@@ -21,9 +21,7 @@ namespace ICANHELPCalculator
 
             await Navigation.PushAsync(new View());
 
-
         }
-
 
     }
 
