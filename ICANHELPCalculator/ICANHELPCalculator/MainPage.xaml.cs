@@ -11,8 +11,10 @@ namespace ICANHELPCalculator
     public partial class MainPage : ContentPage
     {
         int currentState = 1;
-        string myoperator;
+        string myoperator, x="X",y="Y",z="Z";
         double firstNumber, secondNumber;
+
+
         public MainPage()
         {
             InitializeComponent();
@@ -49,8 +51,44 @@ namespace ICANHELPCalculator
                 {
                     secondNumber = number;//it will be implemented as the number of current state changes i.e. 2
                 }
+
+
             }
 
+        }
+        private void OnSelectVariable(object sender, EventArgs e)
+        {
+            Button button = new Button();
+
+            string pressed = button.Text;
+           
+
+            if (this.resultText.Text == "0" || currentState < 0)//at first current state is 1
+            {
+                this.resultText.Text = "{variable}";//here the text value will be cleared when pressing button
+
+                if (currentState < 0) //at first current value is 1 so this condition is excluded
+                    currentState *= -1;
+            }
+
+            this.resultText.Text += pressed;// this condition is called when current state is greater and text box will aquire the pressed 
+
+            string variable = x, y, z;
+            // STILL HAVING AN ISSUE GETTING THE VARIABLE TO PRINT OUT ON THE CALCULATOR FUNCTION freez this operation for now
+
+            //if ()
+            //{
+            //    this.resultText.Text = variable;
+               
+            //    if (currentState == 1)
+            //    {
+            //        myoperator = variable;//at first current state will be 1 and it will assign first number with the pressed number variable
+            //    }
+            //    else
+            //    {
+            //        myoperator = variable;//it will be implemented as the number of current state changes i.e. 2
+            //    }
+            //}
         }
 
         void OnSelectOperator(object sender, EventArgs e)//event is called when the select operator is called 
@@ -119,13 +157,26 @@ namespace ICANHELPCalculator
 
             if ((currentState == -1) || (currentState == 1))
             {
-                //var result = OperatorHelper.MySquare(firstNumber, myoperator);
-                var result = firstNumber * firstNumber;
+                var result = Math.Exp(secondNumber);
+                //var result = firstNumber * firstNumber;
                 this.resultText.Text = result.ToString();
                 firstNumber = result;
                 currentState = -1;
             }
         }
+        private void Exponentclicked(object sender, EventArgs e)//We call this method when we have one resulting number or initial number ,we are going to find out the square root of that number
+        {
+
+            if ((currentState == -1) || (currentState == 1))
+            {
+                //var result = OperatorHelper.MySquare(firstNumber, myoperator);
+                var result = Math.Pow(firstNumber,firstNumber);
+                this.resultText.Text = result.ToString();
+                firstNumber = result;
+                currentState = -1;
+            }
+        }
+      
 
     }
 
