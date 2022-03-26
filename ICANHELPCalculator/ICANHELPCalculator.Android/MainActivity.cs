@@ -5,6 +5,13 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 
+/*
+[Activity(Label = "MyRotatingApp.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Landscape)] //This is what controls orientation
+public class MainActivity : FormsAppCompatActivity
+{
+    protected override void OnCreate(Bundle bundle)
+...
+*/
 namespace ICANHELPCalculator.Droid
 {                                                                                       //code added so the phone is available on landscape
     [Activity(Label = "ICANHELPCalculator", Icon = "@mipmap/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.FullSensor, Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]

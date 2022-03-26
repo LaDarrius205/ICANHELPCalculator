@@ -19,6 +19,6 @@ namespace ICANHELPCalculator
         }
         async void ForgotButtonClicked(object sender, EventArgs e) { await Navigation.PushAsync(new PWRecovery()); }
         async void RegButtonClicked(object sender, EventArgs e) { await Navigation.PushAsync(new ProfileRegister()); }
-        async void SubmitButtonClicked(object sender, EventArgs e) { await Navigation.PushAsync(new MainPage()); }
+        async void SubmitButtonClicked(object sender, EventArgs e) { await Navigation.PushAsync(new View()); }
     }
 }

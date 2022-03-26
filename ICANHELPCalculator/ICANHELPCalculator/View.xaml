@@ -12,11 +12,11 @@
         <ResourceDictionary>
 
             <Style x:Key ="infostyle" TargetType="Button">
-                <Setter Property="WidthRequest" Value="60" />
-                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="HeightRequest" Value="50"/>
                 <Setter Property="BorderRadius" Value="30"/>
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="Body"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -40,7 +40,7 @@
 
         <Label x:Name="resultText" FontSize="40" FontAttributes="Bold" BackgroundColor="Black" Text="0"
               TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+              LineBreakMode="NoWrap" Grid.ColumnSpan="6" />
 
 
         <Button Text="AC" Grid.Row="1" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="Red" Clicked="OnClear" />
@@ -80,7 +80,8 @@
         
         <Button Text="(" Grid.Row="4" Grid.Column="4" BackgroundColor="#EE7600"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}"/>
         <Button Text=")" Grid.Row="5" Grid.Column="4" BackgroundColor="#EE7600"  Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
-        <Button Text="^" Grid.Row="1" Grid.Column="5" BackgroundColor="#EE7600" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
-        <Button Text="." Grid.Row="2" Grid.Column="5" BackgroundColor="#EE7600" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        
+        <Button Text="^" Grid.Row="1" Grid.Column="5" BackgroundColor="Brown" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
+        <Button Text="." Grid.Row="2" Grid.Column="5" BackgroundColor="Brown" Clicked="OnSelectOperator" Style="{StaticResource infostyle}" />
     </Grid>
 </ContentPage>

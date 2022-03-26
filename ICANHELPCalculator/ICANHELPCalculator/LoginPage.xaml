@@ -6,30 +6,30 @@
         <!--LOGIN PAGE-->
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.Background>
-                <LinearGradientBrush StartPoint="0.9,0" EndPoint="0,0.9">
-                    <GradientStop Color="Purple"  Offset="0.05"/>
+                <LinearGradientBrush StartPoint="0.7,1" EndPoint="0,1.2">
+                    <GradientStop Color="Indigo"  Offset="0.05"/>
                     <GradientStop Color="Lime" Offset="0.08"/>
-                    <GradientStop Color="Indigo"  Offset="0.15"/>
-                    <GradientStop Color="Lime" Offset="0.3"/>
-                    <GradientStop Color="Yellow" Offset="0.9"/>
+                    <GradientStop Color="Indigo"  Offset="0.5"/>
+                    <GradientStop Color="Yellow" Offset="1.5"/>
+                    <GradientStop Color="DeepSkyBlue"  Offset="1.01"/>
 
 
-                </LinearGradientBrush>
+            </LinearGradientBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <!--Logo-->
-                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2*"/>
                 <!--Login-->
-                <RowDefinition Height="4*"/>
+                <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
             <Image
             Source="ICanHelp"
             Grid.Row="0"
-            VerticalOptions="Center"
+            VerticalOptions="StartAndExpand"
             HorizontalOptions="Center"
             Grid.Column="0" />
             <!--Email/password-->
@@ -48,7 +48,7 @@
                     Text="{Binding Email}"
                     Keyboard="Email"
                     WidthRequest="300"
-                    BackgroundColor="Purple"/>
+                    BackgroundColor="White"/>
                 </StackLayout>
                 <StackLayout>
                     <Label
@@ -60,7 +60,7 @@
                     Text="{Binding Password}"
                     WidthRequest="300"
                     IsPassword="True"
-                    BackgroundColor="Purple"  />
+                    BackgroundColor="White"  />
                 </StackLayout>
             </StackLayout>
             <!--Buttons-->
@@ -68,7 +68,7 @@
             Grid.Row="1"
             VerticalOptions="End"
             HorizontalOptions="Center"
-            Margin="10,0,0,15"
+            Margin="10,0,0,10"
             Spacing="15">
                 <Button
                 x:Name="ForgotPassword"
@@ -97,7 +97,7 @@
                 Text="Submit"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                BackgroundColor="Green"
+                BackgroundColor="ForestGreen"
                 TextColor="White"
                 Margin="15,10"
                 CornerRadius="10"
